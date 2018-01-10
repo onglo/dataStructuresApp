@@ -14,6 +14,7 @@
 		5B6AED4520067DDF00ADF843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AED4320067DDF00ADF843 /* LaunchScreen.storyboard */; };
 		5B6AED4F20068ED300ADF843 /* newOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AED4E20068ED300ADF843 /* newOrderViewController.swift */; };
 		5B6AED51200690F300ADF843 /* addOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AED50200690F300ADF843 /* addOrderTableViewCell.swift */; };
+		5B6AED532006976300ADF843 /* orderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AED522006976300ADF843 /* orderConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5B6AED4620067DDF00ADF843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B6AED4E20068ED300ADF843 /* newOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newOrderViewController.swift; sourceTree = "<group>"; };
 		5B6AED50200690F300ADF843 /* addOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addOrderTableViewCell.swift; sourceTree = "<group>"; };
+		5B6AED522006976300ADF843 /* orderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				5B6AED4E20068ED300ADF843 /* newOrderViewController.swift */,
 				5B6AED3C20067DDF00ADF843 /* ViewController.swift */,
 				5B6AED3E20067DDF00ADF843 /* Main.storyboard */,
+				5B6AED522006976300ADF843 /* orderConfirmationViewController.swift */,
 				5B6AED50200690F300ADF843 /* addOrderTableViewCell.swift */,
 				5B6AED4120067DDF00ADF843 /* Assets.xcassets */,
 				5B6AED4320067DDF00ADF843 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 				5B6AED3D20067DDF00ADF843 /* ViewController.swift in Sources */,
 				5B6AED51200690F300ADF843 /* addOrderTableViewCell.swift in Sources */,
 				5B6AED3B20067DDF00ADF843 /* AppDelegate.swift in Sources */,
+				5B6AED532006976300ADF843 /* orderConfirmationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,7 +45,7 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
         }
         else {
             
-            cellToInsert.mainLabel.text = "Order \(indexPath.row) - \(String(describing: orders[indexPath.row]))"
+            cellToInsert.mainLabel.text = "Order \(indexPath.row + 1) - \(String(describing: orders[indexPath.row]))"
             return cellToInsert
         }
         
@@ -64,6 +64,13 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func saveOrderPressed(_ sender: Any) {
+        
+        //comit this order to the total order array
+        totalOrder.append(orders)
+        
+        // perfom segue
+        self.performSegue(withIdentifier: "showDetail", sender: nil)
+        
     }
     
     @IBAction func addComputerPressed(_ sender: Any) {
@@ -84,14 +91,15 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let desViewController = segue.destination as! orderConfirmationViewController
+        desViewController.textString = String(describing:totalOrder)
     }
-    */
 
 }

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var totalOrder = [[[Int]]]()
+
 class ViewController: UIViewController {
     
     // link the table view
