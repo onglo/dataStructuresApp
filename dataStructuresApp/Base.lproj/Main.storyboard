@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--New Order View Controller-->
         <scene sceneID="AN0-Ag-dgF">
             <objects>
-                <viewController id="wcg-Gh-zBW" sceneMemberID="viewController">
+                <viewController id="wcg-Gh-zBW" customClass="newOrderViewController" customModule="dataStructuresApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eyp-jp-UDt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,35 +68,35 @@
                                     <segment title="P7"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lm2-sO-w9f">
+                            <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lm2-sO-w9f">
                                 <rect key="frame" x="37.5" y="149" width="299" height="29"/>
                                 <segments>
                                     <segment title="16GB"/>
                                     <segment title="32GB"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9re-7N-rjv">
+                            <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9re-7N-rjv">
                                 <rect key="frame" x="37.5" y="215" width="299" height="29"/>
                                 <segments>
                                     <segment title="1TB"/>
                                     <segment title="2TB"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tuG-wh-UXI">
+                            <segmentedControl opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tuG-wh-UXI">
                                 <rect key="frame" x="37.5" y="281" width="299" height="29"/>
                                 <segments>
                                     <segment title="19&quot;"/>
                                     <segment title="23&quot;"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-1P-Lb2">
+                            <segmentedControl opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-1P-Lb2">
                                 <rect key="frame" x="37.5" y="347" width="299" height="29"/>
                                 <segments>
                                     <segment title="Mini Tower"/>
                                     <segment title="Midi Tower"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q1f-ow-vP2">
+                            <segmentedControl opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q1f-ow-vP2">
                                 <rect key="frame" x="37.5" y="413" width="299" height="29"/>
                                 <segments>
                                     <segment title="2 Ports"/>
@@ -103,12 +104,46 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we7-tB-wAf">
-                                <rect key="frame" x="152.5" y="466" width="69" height="30"/>
-                                <state key="normal" title="Add order"/>
+                                <rect key="frame" x="138.5" y="466" width="98" height="30"/>
+                                <state key="normal" title="Add computer"/>
+                                <connections>
+                                    <action selector="addComputerPressed:" destination="wcg-Gh-zBW" eventType="touchUpInside" id="3Uc-He-vo7"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IAX-gr-4Kw">
                                 <rect key="frame" x="0.0" y="521" width="375" height="146"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="BE6-cp-erT" customClass="addOrderTableViewCell" customModule="dataStructuresApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BE6-cp-erT" id="Od1-It-Wvi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order 1 - P3, 16GB etc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnJ-3N-VoU">
+                                                    <rect key="frame" x="15" y="11" width="345" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nnJ-3N-VoU" secondAttribute="bottom" id="0D9-D2-QDa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nnJ-3N-VoU" secondAttribute="trailing" id="IO3-Sq-Lob"/>
+                                                <constraint firstItem="nnJ-3N-VoU" firstAttribute="leading" secondItem="Od1-It-Wvi" secondAttribute="leadingMargin" id="aD4-kX-7t6"/>
+                                                <constraint firstItem="nnJ-3N-VoU" firstAttribute="top" secondItem="Od1-It-Wvi" secondAttribute="topMargin" id="dG6-MC-5F7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainLabel" destination="nnJ-3N-VoU" id="gep-U5-2Eo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wcg-Gh-zBW" id="E8C-l3-NGJ"/>
+                                    <outlet property="delegate" destination="wcg-Gh-zBW" id="hfW-Tj-K9Z"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Processor:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4j-bh-R2O">
                                 <rect key="frame" x="38" y="60" width="299" height="18"/>
@@ -149,6 +184,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYu-MI-pEn">
                                 <rect key="frame" x="283" y="15" width="77" height="30"/>
                                 <state key="normal" title="Save Order"/>
+                                <connections>
+                                    <action selector="saveOrderPressed:" destination="wcg-Gh-zBW" eventType="touchUpInside" id="vpQ-rE-VRO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -202,6 +240,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="76g-qM-Dno"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="IAX-gr-4Kw" id="kKi-DC-aUW"/>
+                        <outletCollection property="computerOptions" destination="6xb-io-5Zl" collectionClass="NSMutableArray" id="ibr-3j-jV4"/>
+                        <outletCollection property="computerOptions" destination="Lm2-sO-w9f" collectionClass="NSMutableArray" id="4vu-pb-wgd"/>
+                        <outletCollection property="computerOptions" destination="9re-7N-rjv" collectionClass="NSMutableArray" id="zmM-Uj-tjd"/>
+                        <outletCollection property="computerOptions" destination="tuG-wh-UXI" collectionClass="NSMutableArray" id="3u0-tk-s8v"/>
+                        <outletCollection property="computerOptions" destination="uEc-1P-Lb2" collectionClass="NSMutableArray" id="TgU-Ps-ibI"/>
+                        <outletCollection property="computerOptions" destination="q1f-ow-vP2" collectionClass="NSMutableArray" id="Q7m-QL-QPa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOm-Ps-B8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
