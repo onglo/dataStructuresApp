@@ -12,6 +12,10 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
     
     var orders = [[Int]]()
     
+    var orderCosts = [Int]()
+    
+    var partCosts = [[100,120,200],[75,150],[50,100],[65,120],[40,70],[10,20]]
+    
     // reference table view
     @IBOutlet weak var tableView: UITableView!
     
@@ -45,7 +49,7 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
         }
         else {
             
-            cellToInsert.mainLabel.text = "Order \(indexPath.row + 1) - \(String(describing: orders[indexPath.row]))"
+            cellToInsert.mainLabel.text = "Order \(indexPath.row + 1) - \(String(describing: orders[indexPath.row])) cost: \(String(describing: orderCosts[indexPath.row]))"
             return cellToInsert
         }
         
@@ -78,9 +82,20 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
         // prepare array that holds the customer's order
         var computerOrder = [Int]()
         
+        // add a value the order cost that will hold the total cost of the order
+        orderCosts.append(0)
+        
+        // keeps track of which part we are on
+        var partNo = 0
+        
         for control in computerOptions {
             
             computerOrder.append(control.selectedSegmentIndex)
+            
+            // add the cost of this part to the total cost of the order [end index points to one greater than final order in ordercosts]
+            orderCosts[orderCosts.endIndex - 1] += partCosts[partNo][control.selectedSegmentIndex]
+            
+            partNo += 1
         }
         
         // add this to the main orders array
