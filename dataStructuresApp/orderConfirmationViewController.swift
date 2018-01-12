@@ -21,8 +21,8 @@ class orderConfirmationViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //set text of text field to be the orders list
-        print(textString)
         textField.text = textString
+        
     }
 
     override func didReceiveMemoryWarning() {

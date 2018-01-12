@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class newOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -15,6 +16,8 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
     var orderCosts = [Int]()
     
     var partCosts = [[100,120,200],[75,150],[50,100],[65,120],[40,70],[10,20]]
+    
+    var databaseReference:DatabaseReference!
     
     // reference table view
     @IBOutlet weak var tableView: UITableView!
@@ -58,6 +61,9 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set database reference
+        databaseReference = Database.database().reference()
 
         // Do any additional setup after loading the view.
     }
@@ -71,7 +77,7 @@ class newOrderViewController: UIViewController, UITableViewDelegate, UITableView
         
         //comit this order to the total order array
         totalOrder.append(orders)
-        
+                
         // perfom segue
         self.performSegue(withIdentifier: "showDetail", sender: nil)
         
