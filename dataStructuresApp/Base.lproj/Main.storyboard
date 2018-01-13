@@ -68,7 +68,7 @@
                                     <constraint firstAttribute="width" constant="299" id="jrX-jb-CNU"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="P3"/>
+                                    <segment title=""/>
                                     <segment title="P5"/>
                                     <segment title="P7"/>
                                 </segments>
@@ -281,8 +281,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="TEXT" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ID-Gr-XH1">
-                                <rect key="frame" x="25" y="111" width="325" height="531"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ID-Gr-XH1">
+                                <rect key="frame" x="25" y="111" width="325" height="156"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -293,38 +293,69 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPM-y0-R9U">
-                                <rect key="frame" x="327" y="20" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tde-1o-Gnh">
+                                <rect key="frame" x="104.5" y="287" width="166.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bo5-z0-iDS">
+                                <rect key="frame" x="25" y="333" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jwa-fX-RCL">
+                                <rect key="frame" x="25" y="383" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-LA-WYS">
+                                <rect key="frame" x="81.5" y="438" width="213" height="30"/>
+                                <state key="normal" title="Save Customer Data and Close"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="M89-yH-tU8"/>
+                                    <action selector="saveCustomerDataPressed:" destination="Kxy-uk-Hm9" eventType="touchUpInside" id="ZbT-RM-ko7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Jwa-fX-RCL" firstAttribute="centerX" secondItem="KaV-Pi-7kl" secondAttribute="centerX" id="0Ka-w5-CaA"/>
+                            <constraint firstItem="Ghc-LA-WYS" firstAttribute="centerX" secondItem="KaV-Pi-7kl" secondAttribute="centerX" id="2Rn-1h-qCo"/>
                             <constraint firstItem="e2Z-ng-3GY" firstAttribute="top" secondItem="A2f-ed-yjr" secondAttribute="top" constant="5" id="5EI-b6-Yjr"/>
-                            <constraint firstItem="A2f-ed-yjr" firstAttribute="bottom" secondItem="3ID-Gr-XH1" secondAttribute="bottom" constant="25" id="LrE-El-2jd"/>
+                            <constraint firstItem="Bo5-z0-iDS" firstAttribute="leading" secondItem="A2f-ed-yjr" secondAttribute="leading" constant="25" id="7kr-xQ-D2c"/>
+                            <constraint firstItem="Bo5-z0-iDS" firstAttribute="top" secondItem="Tde-1o-Gnh" secondAttribute="bottom" constant="25" id="Awr-ZX-lhG"/>
+                            <constraint firstItem="Jwa-fX-RCL" firstAttribute="leading" secondItem="A2f-ed-yjr" secondAttribute="leading" constant="25" id="HY3-we-Oio"/>
+                            <constraint firstItem="A2f-ed-yjr" firstAttribute="trailing" secondItem="Jwa-fX-RCL" secondAttribute="trailing" constant="25" id="I26-ix-uC6"/>
+                            <constraint firstItem="A2f-ed-yjr" firstAttribute="bottom" secondItem="3ID-Gr-XH1" secondAttribute="bottom" constant="400" id="LrE-El-2jd"/>
                             <constraint firstItem="e2Z-ng-3GY" firstAttribute="trailing" secondItem="A2f-ed-yjr" secondAttribute="trailing" constant="5" id="OdL-sB-kJ0"/>
                             <constraint firstItem="3ID-Gr-XH1" firstAttribute="centerX" secondItem="KaV-Pi-7kl" secondAttribute="centerX" id="QVd-9X-uln"/>
                             <constraint firstItem="3ID-Gr-XH1" firstAttribute="top" secondItem="D12-Du-a6f" secondAttribute="bottom" constant="5" id="RgE-8s-73d"/>
+                            <constraint firstItem="Jwa-fX-RCL" firstAttribute="top" secondItem="Bo5-z0-iDS" secondAttribute="bottom" constant="20" id="Sb2-7s-don"/>
+                            <constraint firstItem="Tde-1o-Gnh" firstAttribute="top" secondItem="3ID-Gr-XH1" secondAttribute="bottom" constant="20" id="Sk3-un-5NM"/>
                             <constraint firstItem="3ID-Gr-XH1" firstAttribute="top" secondItem="e2Z-ng-3GY" secondAttribute="bottom" constant="65" id="TRR-th-hix"/>
-                            <constraint firstItem="A2f-ed-yjr" firstAttribute="trailing" secondItem="KPM-y0-R9U" secondAttribute="trailing" constant="9" id="XgJ-Tb-AXe"/>
                             <constraint firstItem="A2f-ed-yjr" firstAttribute="trailing" secondItem="3ID-Gr-XH1" secondAttribute="trailing" constant="25" id="ZSB-TK-xwg"/>
                             <constraint firstItem="D12-Du-a6f" firstAttribute="centerX" secondItem="KaV-Pi-7kl" secondAttribute="centerX" id="ebV-q2-OO6"/>
+                            <constraint firstItem="Tde-1o-Gnh" firstAttribute="centerX" secondItem="KaV-Pi-7kl" secondAttribute="centerX" id="fKY-w0-cXf"/>
+                            <constraint firstItem="Ghc-LA-WYS" firstAttribute="top" secondItem="Jwa-fX-RCL" secondAttribute="bottom" constant="25" id="fwE-Vu-hsp"/>
                             <constraint firstItem="e2Z-ng-3GY" firstAttribute="leading" secondItem="A2f-ed-yjr" secondAttribute="leading" constant="5" id="oTf-69-7QZ"/>
-                            <constraint firstItem="KPM-y0-R9U" firstAttribute="top" secondItem="A2f-ed-yjr" secondAttribute="top" id="shC-nh-n7H"/>
+                            <constraint firstItem="A2f-ed-yjr" firstAttribute="trailing" secondItem="Bo5-z0-iDS" secondAttribute="trailing" constant="25" id="sby-Gm-UGx"/>
                             <constraint firstItem="3ID-Gr-XH1" firstAttribute="leading" secondItem="A2f-ed-yjr" secondAttribute="leading" constant="25" id="vXa-eB-03L"/>
+                            <constraint firstItem="Bo5-z0-iDS" firstAttribute="centerX" secondItem="KaV-Pi-7kl" secondAttribute="centerX" id="zsz-fj-QTb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A2f-ed-yjr"/>
                     </view>
                     <connections>
+                        <outlet property="customerAddressInput" destination="Jwa-fX-RCL" id="fkE-Vx-l1n"/>
+                        <outlet property="customerNameInput" destination="Bo5-z0-iDS" id="hEt-Ie-Tfo"/>
                         <outlet property="textField" destination="3ID-Gr-XH1" id="PAl-fx-2No"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="closeOrder" id="72i-eA-RZr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEn-mM-RFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="117"/>
+            <point key="canvasLocation" x="1597.5999999999999" y="116.49175412293854"/>
         </scene>
     </scenes>
 </document>
