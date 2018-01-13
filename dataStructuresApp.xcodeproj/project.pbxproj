@@ -19,6 +19,8 @@
 		5B6AED532006976300ADF843 /* orderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AED522006976300ADF843 /* orderConfirmationViewController.swift */; };
 		5BADFBD2200A079500B473C2 /* viewCustomersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADFBD1200A079500B473C2 /* viewCustomersTableViewController.swift */; };
 		5BADFBD4200A07F600B473C2 /* customerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADFBD3200A07F600B473C2 /* customerTableViewCell.swift */; };
+		5BADFBD6200A0B0A00B473C2 /* consigmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADFBD5200A0B0A00B473C2 /* consigmentsTableViewController.swift */; };
+		5BADFBD8200A0B3300B473C2 /* consignmentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADFBD7200A0B3300B473C2 /* consignmentsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		5B6AED522006976300ADF843 /* orderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderConfirmationViewController.swift; sourceTree = "<group>"; };
 		5BADFBD1200A079500B473C2 /* viewCustomersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewCustomersTableViewController.swift; sourceTree = "<group>"; };
 		5BADFBD3200A07F600B473C2 /* customerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customerTableViewCell.swift; sourceTree = "<group>"; };
+		5BADFBD5200A0B0A00B473C2 /* consigmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consigmentsTableViewController.swift; sourceTree = "<group>"; };
+		5BADFBD7200A0B3300B473C2 /* consignmentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consignmentsTableViewCell.swift; sourceTree = "<group>"; };
 		600F42C547A85035BE26FFC8 /* Pods-dataStructuresApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dataStructuresApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-dataStructuresApp/Pods-dataStructuresApp.release.xcconfig"; sourceTree = "<group>"; };
 		E39D899459D27F5D75687E39 /* Pods-dataStructuresApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dataStructuresApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dataStructuresApp/Pods-dataStructuresApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,8 @@
 				5B6AED4E20068ED300ADF843 /* newOrderViewController.swift */,
 				5B6AED3C20067DDF00ADF843 /* ViewController.swift */,
 				5B6AED3E20067DDF00ADF843 /* Main.storyboard */,
+				5BADFBD7200A0B3300B473C2 /* consignmentsTableViewCell.swift */,
+				5BADFBD5200A0B0A00B473C2 /* consigmentsTableViewController.swift */,
 				5BADFBD3200A07F600B473C2 /* customerTableViewCell.swift */,
 				5BADFBD1200A079500B473C2 /* viewCustomersTableViewController.swift */,
 				5B6AED522006976300ADF843 /* orderConfirmationViewController.swift */,
@@ -242,11 +248,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BADFBD6200A0B0A00B473C2 /* consigmentsTableViewController.swift in Sources */,
 				5BADFBD2200A079500B473C2 /* viewCustomersTableViewController.swift in Sources */,
 				5B6AED4F20068ED300ADF843 /* newOrderViewController.swift in Sources */,
 				5B6AED3D20067DDF00ADF843 /* ViewController.swift in Sources */,
 				5B6AED51200690F300ADF843 /* addOrderTableViewCell.swift in Sources */,
 				5B6AED3B20067DDF00ADF843 /* AppDelegate.swift in Sources */,
+				5BADFBD8200A0B3300B473C2 /* consignmentsTableViewCell.swift in Sources */,
 				5B6AED532006976300ADF843 /* orderConfirmationViewController.swift in Sources */,
 				5BADFBD4200A07F600B473C2 /* customerTableViewCell.swift in Sources */,
 			);
