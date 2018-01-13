@@ -32,14 +32,25 @@
                                     <segue destination="wcg-Gh-zBW" kind="show" id="Zud-WX-BjK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKg-Aj-BVd">
+                                <rect key="frame" x="25" y="126" width="325" height="30"/>
+                                <state key="normal" title="View Customers"/>
+                                <connections>
+                                    <segue destination="S4s-A4-sHm" kind="show" id="tLa-bT-eDR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UKg-Aj-BVd" firstAttribute="top" secondItem="PKM-cg-n4y" secondAttribute="bottom" constant="15" id="2bc-ED-GxT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UKg-Aj-BVd" secondAttribute="trailing" constant="25" id="EZ3-tf-yFI"/>
                             <constraint firstItem="PKM-cg-n4y" firstAttribute="top" secondItem="GPu-iX-zbK" secondAttribute="bottom" constant="20" id="FjM-mS-xIv"/>
+                            <constraint firstItem="UKg-Aj-BVd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MYV-cd-e49"/>
                             <constraint firstItem="PKM-cg-n4y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QHk-MT-BQ2"/>
                             <constraint firstItem="GPu-iX-zbK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Rzo-3P-ohh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GPu-iX-zbK" secondAttribute="trailing" id="Tf8-CZ-0Ny"/>
                             <constraint firstItem="GPu-iX-zbK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WJi-wS-yAZ"/>
+                            <constraint firstItem="UKg-Aj-BVd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="e0p-ES-fQI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -47,6 +58,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--View Customers Table View Controller-->
+        <scene sceneID="FbS-eU-T52">
+            <objects>
+                <tableViewController id="S4s-A4-sHm" customClass="viewCustomersTableViewController" customModule="dataStructuresApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WBX-QI-pjX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qhS-vI-X5Z">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Close"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="MVx-HG-KA8"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customerTableViewCell" id="T3p-vc-PQq" customClass="customerTableViewCell" customModule="dataStructuresApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" restorationIdentifier="I" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T3p-vc-PQq" id="tCb-HK-i0Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-zI-Pah">
+                                            <rect key="frame" x="16" y="11" width="42" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lMN-zI-Pah" firstAttribute="top" secondItem="tCb-HK-i0Z" secondAttribute="topMargin" id="hCE-uh-xph"/>
+                                        <constraint firstItem="lMN-zI-Pah" firstAttribute="leading" secondItem="tCb-HK-i0Z" secondAttribute="leadingMargin" id="jlf-Yk-lxm"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lMN-zI-Pah" secondAttribute="bottom" id="n3l-bb-HTu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="customerInfoLabel" destination="lMN-zI-Pah" id="aWm-FT-CUH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="S4s-A4-sHm" id="M4I-hb-tj3"/>
+                            <outlet property="delegate" destination="S4s-A4-sHm" id="Klh-5e-iA6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqk-Qe-ex5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="918"/>
         </scene>
         <!--New Order View Controller-->
         <scene sceneID="AN0-Ag-dgF">
@@ -358,4 +421,7 @@
             <point key="canvasLocation" x="1597.5999999999999" y="116.49175412293854"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MVx-HG-KA8"/>
+    </inferredMetricsTieBreakers>
 </document>
