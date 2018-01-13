@@ -9,6 +9,9 @@
 import UIKit
 
 class consigmentsTableViewController: UITableViewController {
+    
+    
+    var partNames:[String:[String]] = ["processor": ["p3", "p5", "p7"], "ram": ["16GB", "32GB"], "storage": ["1TB", "2TB"], "screen": ["19'", "23'"], "case": ["Mini","Midi"], "ports": ["2","4"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,19 +42,36 @@ class consigmentsTableViewController: UITableViewController {
         else {
             return totalOrder.count
         }
-        // next put this info in the custom cell
     
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "consignmentCell", for: indexPath) as! consignmentsTableViewCell
+
+        if totalOrder.count == 0 {
+            cell.mainTextBlock.text = "No consignments yet!"
+        }
+        else {
+            
+            // add customers name
+            var stringToAdd = "Customer: \(customerData[indexPath.row].name) -"
+            
+            // for each order the customer has, add it to the label
+            var counter = 0
+            for order in totalOrder[indexPath.row] {
+                
+                // format the label
+                stringToAdd += " Order \(counter + 1): processor \(partNames["processor"]![order[indexPath.row]]), RAM \(partNames["ram"]![order[indexPath.row]]), Storage \(partNames["storage"]![order[indexPath.row]]), Screen \(partNames["screen"]![order[indexPath.row]]), Case \(partNames["case"]![order[indexPath.row]]), USB Ports \(partNames["ports"]![order[indexPath.row]])"
+                
+                counter += 1
+            }
+            
+            cell.mainTextBlock.text = stringToAdd
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
